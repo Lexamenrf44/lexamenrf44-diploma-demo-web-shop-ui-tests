@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class WebShopTopMenuComputersTests extends TestBase {
+public class DemoWebShopTopMenuComputersTests extends TestBase {
 
     @Test
     void computersHoverTest() {
