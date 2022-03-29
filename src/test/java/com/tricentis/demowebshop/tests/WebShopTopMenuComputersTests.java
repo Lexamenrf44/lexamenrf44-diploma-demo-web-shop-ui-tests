@@ -1,16 +1,12 @@
 package com.tricentis.demowebshop.tests;
 
-import static io.qameta.allure.Allure.*;
-
 import com.tricentis.demowebshop.configuration.TestBase;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class DiplomaWebShopUiTests extends TestBase {
+public class WebShopTopMenuComputersTests extends TestBase {
 
     @Test
     void computersHoverTest() {
