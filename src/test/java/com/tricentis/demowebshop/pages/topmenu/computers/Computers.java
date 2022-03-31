@@ -1,6 +1,7 @@
 package com.tricentis.demowebshop.pages.topmenu.computers;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -14,15 +15,17 @@ public class Computers {
     }
 
     public Computers checkComputersHover() {
-        $("[href*='/computers']").hover().should(appear);
-        $("[href*='/computers']").hover().shouldBe(visible);
+        $("[href*='/computers']").hover();
+        $(withText("Desktops")).should(appear);
+        $(withText("Notebooks")).should(appear);
+        $(withText("Accessories")).should(appear);
 
         return this;
     }
 
     public Computers moveToComputersSection() {
 
-        $("[href*='/computers']").click();
+        $(".top-menu [href='/computers']").click();
 
         return this;
     }
