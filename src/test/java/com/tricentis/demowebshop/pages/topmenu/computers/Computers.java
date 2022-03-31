@@ -28,9 +28,24 @@ public class Computers {
     }
 
     public Computers checkComputersSection() {
+        $("[class='page category-page']").should(appear);
+        $("[class='page category-page']").should(visible);
+
+
+        return this;
+    }
+
+    public Computers checkComputersSectionTitle() {
         $("[class='page-title']").should(appear);
         $("[class='page-title']").shouldBe(visible);
         $("[class='page-title']").shouldHave(text("Computers"));
+
+        return this;
+    }
+
+    public Computers checkComputersSectionSubCategories() {
+        $("[class='sub-category-grid']").should(appear);
+        $("[class='sub-category-grid']").should(visible);
 
         return this;
     }
