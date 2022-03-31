@@ -27,7 +27,7 @@ public class Computers {
         return this;
     }
 
-    public Computers checkComputersSection() {
+    public Computers checkComputersSectionPage() {
         $("[class='page category-page']").should(appear);
         $("[class='page category-page']").should(visible);
 
