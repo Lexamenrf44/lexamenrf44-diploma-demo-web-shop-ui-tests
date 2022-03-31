@@ -14,7 +14,8 @@ public class Computers {
     }
 
     public Computers checkComputersHover() {
-        $("[href*='/computers']").hover().should(appear).shouldBe(visible);
+        $("[href*='/computers']").hover().should(appear);
+        $("[href*='/computers']").hover().shouldBe(visible);
 
         return this;
     }
