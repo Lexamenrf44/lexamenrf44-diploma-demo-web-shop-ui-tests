@@ -28,7 +28,8 @@ public class Computers {
 
     public Computers checkComputersSection() {
         $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);;
+        $("[class='page-title']").shouldBe(visible);
+        $("[class='page-title']").shouldHave(text("Computers"));
 
         return this;
     }
@@ -42,7 +43,8 @@ public class Computers {
 
     public Computers checkDesktopsSection() {
         $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);;
+        $("[class='page-title']").shouldBe(visible);
+        $("[class='page-title']").shouldHave(text("Desktops"));
 
         return this;
     }
@@ -56,7 +58,8 @@ public class Computers {
 
     public Computers checkNotebooksSection() {
         $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);;
+        $("[class='page-title']").shouldBe(visible);
+        $("[class='page-title']").shouldHave(text("Notebooks"));
 
         return this;
     }
@@ -70,7 +73,8 @@ public class Computers {
 
     public Computers checkAccessoriesSection() {
         $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);;
+        $("[class='page-title']").shouldBe(visible);
+        $("[class='page-title']").shouldHave(text("Accessories"));
 
         return this;
     }
