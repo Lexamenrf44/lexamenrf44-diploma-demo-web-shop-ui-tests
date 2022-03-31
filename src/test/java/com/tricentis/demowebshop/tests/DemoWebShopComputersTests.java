@@ -30,7 +30,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Проверка отображения страницы компьютеров", () -> {
-            computers.checkComputersSection();
+            computers.checkComputersSectionPage();
         });
 
         step("Проверка отображения заголовка страницы компьютеров", () -> {
