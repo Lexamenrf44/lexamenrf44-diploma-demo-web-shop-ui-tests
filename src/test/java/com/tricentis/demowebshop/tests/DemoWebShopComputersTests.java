@@ -33,6 +33,14 @@ public class DemoWebShopComputersTests extends TestBase {
             computers.checkComputersSection();
         });
 
+        step("Проверка отображения заголовка страницы компьютеров", () -> {
+            computers.checkComputersSectionTitle();
+        });
+
+        step("Проверка отображения таблицы на странице компьютеров", () -> {
+            computers.checkComputersSectionSubCategories();
+        });
+
     }
 
     @Owner("lexamenrf44")
