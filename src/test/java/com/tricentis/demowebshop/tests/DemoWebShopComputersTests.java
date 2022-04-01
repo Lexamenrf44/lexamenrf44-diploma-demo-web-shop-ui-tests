@@ -19,7 +19,7 @@ public class DemoWebShopComputersTests extends TestBase {
     @DisplayName("Тестирование отображения ховер-кнопки 'Computers' в верхнем меню")
     @Severity(SeverityLevel.BLOCKER)
     @Test
-    void computersTopMenuHoverButtonTest() {
+    void computersTopMenuComputersHoverButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
             computers.openDemoWebShop();
