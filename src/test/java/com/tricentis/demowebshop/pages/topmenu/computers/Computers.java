@@ -14,11 +14,18 @@ public class Computers {
         return this;
     }
 
-    public Computers checkComputersHover() {
-        $("[href*='/computers']").hover();
+    public Computers checkTopMenuComputersHover() {
+        $(".top-menu [href*='/computers']").hover();
         $(withText("Desktops")).should(appear);
         $(withText("Notebooks")).should(appear);
         $(withText("Accessories")).should(appear);
+
+        return this;
+    }
+
+    public Computers checkLeftMenuComputersButton() {
+        $(".block-category-navigation [href*='/computers']").should(appear);
+        $(".block-category-navigation [href*='/computers']").shouldBe(visible);
 
         return this;
     }
