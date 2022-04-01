@@ -92,7 +92,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.moveToComputersSection();
+            computers.goToComputersSection();
         });
 
         step("Перейти на страницу стационарных компьютеров", () -> {
@@ -118,7 +118,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.moveToComputersSection();
+            computers.goToComputersSection();
         });
 
         step("Перейти на страницу ноутбуков", () -> {
@@ -144,7 +144,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.moveToComputersSection();
+            computers.goToComputersSection();
         });
 
         step("Перейти на страницу аксессуаров", () -> {
