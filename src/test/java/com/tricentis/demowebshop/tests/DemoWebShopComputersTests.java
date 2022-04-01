@@ -37,7 +37,7 @@ public class DemoWebShopComputersTests extends TestBase {
     @DisplayName("Тестирование отображения кнопки 'Computers' в левом боковом меню")
     @Severity(SeverityLevel.BLOCKER)
     @Test
-    void computersCategoryMenuComputersButtonTest() {
+    void computersCategoryLeftMenuComputersButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
             computers.openDemoWebShop();
