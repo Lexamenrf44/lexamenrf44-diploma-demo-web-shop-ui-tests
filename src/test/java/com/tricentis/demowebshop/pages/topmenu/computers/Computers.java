@@ -57,14 +57,8 @@ public class Computers {
         $("[class='sub-category-grid']").should(appear);
         $("[class='sub-category-grid']").should(visible);
         $$(".item-box").shouldHave(size(3));
-        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").should(appear);
-        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldBe(visible);
         $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldHave(text("Desktops"));
-        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").should(appear);
-        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldBe(visible);
         $(".page-body .sub-category-grid .item-box .title [href*='/notebooks']").shouldHave(text("Notebooks"));
-        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").should(appear);
-        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldBe(visible);
         $(".page-body .sub-category-grid .item-box .title [href*='/accessories']").shouldHave(text("Accessories"));
 
         return this;
