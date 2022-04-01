@@ -1,9 +1,9 @@
 package com.tricentis.demowebshop.pages.topmenu.computers;
 
+import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class Computers {
 
@@ -56,6 +56,16 @@ public class Computers {
     public Computers checkComputersSectionSubCategories() {
         $("[class='sub-category-grid']").should(appear);
         $("[class='sub-category-grid']").should(visible);
+        $$(".item-box").shouldHave(size(3));
+        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").should(appear);
+        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldBe(visible);
+        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldHave(text("Desktops"));
+        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").should(appear);
+        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldBe(visible);
+        $(".page-body .sub-category-grid .item-box .title [href*='/notebooks']").shouldHave(text("Notebooks"));
+        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").should(appear);
+        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldBe(visible);
+        $(".page-body .sub-category-grid .item-box .title [href*='/accessories']").shouldHave(text("Accessories"));
 
         return this;
     }
