@@ -39,7 +39,7 @@ public class Computers {
 
     public Computers checkComputersSectionPage() {
         $("[class='page category-page']").should(appear);
-        $("[class='page category-page']").should(visible);
+        $("[class='page category-page']").shouldBe(visible);
 
 
         return this;
