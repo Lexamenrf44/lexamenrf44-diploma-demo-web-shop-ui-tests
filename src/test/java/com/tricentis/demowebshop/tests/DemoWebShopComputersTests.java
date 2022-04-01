@@ -1,7 +1,9 @@
 package com.tricentis.demowebshop.tests;
 
 import com.tricentis.demowebshop.configuration.TestBase;
+import com.tricentis.demowebshop.pages.leftsidemenu.ComputersCategory;
 import com.tricentis.demowebshop.pages.topmenu.computers.Computers;
+import com.tricentis.demowebshop.pages.topmenu.computers.ComputersSection;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 
@@ -12,6 +14,8 @@ import static io.qameta.allure.Allure.step;
 public class DemoWebShopComputersTests extends TestBase {
 
     Computers computers = new Computers();
+    ComputersCategory computersCategory = new ComputersCategory();
+    ComputersSection computersSection = new ComputersSection();
 
     @Owner("lexamenrf44")
     @Feature("Computers section")
@@ -44,7 +48,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Проверка отображения кнопки 'Computers' в боковом меню категорий", () -> {
-            computers.checkLeftMenuComputersButton();
+            computersCategory.checkLeftMenuComputersButton();
         });
 
     }
