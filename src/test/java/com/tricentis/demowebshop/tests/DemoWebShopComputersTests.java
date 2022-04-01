@@ -62,7 +62,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.moveToComputersSection();
+            computers.goToComputersSection();
         });
 
         step("Проверка отображения страницы компьютеров", () -> {
