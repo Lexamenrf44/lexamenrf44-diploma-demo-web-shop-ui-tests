@@ -70,7 +70,7 @@ public class Computers {
         return this;
     }
 
-    public Computers moveToDesktopsBrowsePage() {
+    public Computers goToDesktopsBrowsePage() {
 
         $("[alt='Picture for category Desktops']").click();
 
