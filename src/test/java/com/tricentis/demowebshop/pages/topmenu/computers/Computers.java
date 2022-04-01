@@ -14,7 +14,7 @@ public class Computers {
         return this;
     }
 
-    public Computers checkTopMenuComputersHover() {
+    public Computers checkTopMenuComputersHoverButton() {
         $(".top-menu [href*='/computers']").hover();
         $(withText("Desktops")).should(appear);
         $(withText("Notebooks")).should(appear);
@@ -32,7 +32,7 @@ public class Computers {
 
     public Computers moveToComputersSection() {
 
-        $(".top-menu [href='/computers']").click();
+        $(".top-menu [href*='/computers']").click();
 
         return this;
     }
