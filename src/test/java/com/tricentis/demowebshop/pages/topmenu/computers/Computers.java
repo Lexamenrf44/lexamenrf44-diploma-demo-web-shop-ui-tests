@@ -23,13 +23,6 @@ public class Computers {
         return this;
     }
 
-    public Computers checkLeftMenuComputersButton() {
-        $(".block-category-navigation [href*='/computers']").should(appear);
-        $(".block-category-navigation [href*='/computers']").shouldBe(visible);
-
-        return this;
-    }
-
     public Computers goToComputersSection() {
 
         $(".top-menu [href*='/computers']").click();
