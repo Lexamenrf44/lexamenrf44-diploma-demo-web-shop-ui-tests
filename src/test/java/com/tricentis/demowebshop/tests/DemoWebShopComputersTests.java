@@ -73,7 +73,7 @@ public class DemoWebShopComputersTests extends TestBase {
             computers.checkComputersSectionTitle();
         });
 
-        step("Проверка отображения таблицы на странице компьютеров", () -> {
+        step("Проверка отображения подкатегорий на странице компьютеров", () -> {
             computers.checkComputersSectionSubCategories();
         });
 
