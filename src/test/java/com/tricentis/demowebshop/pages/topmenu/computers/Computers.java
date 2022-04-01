@@ -79,7 +79,7 @@ public class Computers {
         return this;
     }
 
-    public Computers moveToNotebooksBrowsePage() {
+    public Computers goToNotebooksBrowsePage() {
 
         $("[alt='Picture for category Notebooks']").click();
 
@@ -94,7 +94,7 @@ public class Computers {
         return this;
     }
 
-    public Computers moveToAccessoriesBrowsePage() {
+    public Computers goToAccessoriesBrowsePage() {
 
         $("[alt='Picture for category Accessories']").click();
 
