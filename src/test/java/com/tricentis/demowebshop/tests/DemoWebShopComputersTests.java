@@ -26,7 +26,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Проверка отображения ховера 'Computers'", () -> {
-            computers.checkTopMenuComputersHover();
+            computers.checkTopMenuComputersHoverButton();
         });
 
     }
@@ -37,7 +37,7 @@ public class DemoWebShopComputersTests extends TestBase {
     @DisplayName("Тестирование отображения кнопки 'Computers' в левом боковом меню")
     @Severity(SeverityLevel.BLOCKER)
     @Test
-    void computersCategoryMenuButtonTest() {
+    void computersCategoryMenuComputersButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
             computers.openDemoWebShop();
