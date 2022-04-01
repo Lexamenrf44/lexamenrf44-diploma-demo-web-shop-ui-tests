@@ -30,7 +30,7 @@ public class Computers {
         return this;
     }
 
-    public Computers moveToComputersSection() {
+    public Computers goToComputersSection() {
 
         $(".top-menu [href*='/computers']").click();
 
