@@ -15,6 +15,42 @@ public class DemoWebShopComputersTests extends TestBase {
 
     @Owner("lexamenrf44")
     @Feature("Computers section")
+    @Story("На главной странице, в верхнем панели меню реализовать ховер-кнопку, ведущую на страницу компьютеров")
+    @DisplayName("Тестирование отображения ховер-кнопки 'Computers' в верхнем меню")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test
+    void computersTopMenuHoverButtonTest() {
+
+        step("Открыть сайт Demo Web Shop", () -> {
+            computers.openDemoWebShop();
+        });
+
+        step("Проверка отображения ховера 'Computers'", () -> {
+            computers.checkTopMenuComputersHover();
+        });
+
+    }
+
+    @Owner("lexamenrf44")
+    @Feature("Computers section")
+    @Story("На главной странице, в левой боковой панели категорий реализовать кнопку, ведущую на страницу компьютеров")
+    @DisplayName("Тестирование отображения кнопки 'Computers' в левом боковом меню")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test
+    void computersCategoryMenuButtonTest() {
+
+        step("Открыть сайт Demo Web Shop", () -> {
+            computers.openDemoWebShop();
+        });
+
+        step("Проверка отображения кнопки 'Computers' в боковом меню категорий", () -> {
+            computers.checkLeftMenuComputersButton();
+        });
+
+    }
+
+    @Owner("lexamenrf44")
+    @Feature("Computers section")
     @Story("Реализовать отдельную страницу для компьютеров")
     @DisplayName("Тестирование отображения страницы 'Computers'")
     @Severity(SeverityLevel.BLOCKER)
@@ -39,24 +75,6 @@ public class DemoWebShopComputersTests extends TestBase {
 
         step("Проверка отображения таблицы на странице компьютеров", () -> {
             computers.checkComputersSectionSubCategories();
-        });
-
-    }
-
-    @Owner("lexamenrf44")
-    @Feature("Computers section")
-    @Story("Реализовать ховер в верхнем меню, для компьютеров")
-    @DisplayName("Тестирование отображения ховера 'Computers'")
-    @Severity(SeverityLevel.NORMAL)
-    @Test
-    void computersHoverTest() {
-
-        step("Открыть сайт Demo Web Shop", () -> {
-            computers.openDemoWebShop();
-        });
-
-        step("Проверка отображения ховера 'Computers'", () -> {
-            computers.checkComputersHover();
         });
 
     }
