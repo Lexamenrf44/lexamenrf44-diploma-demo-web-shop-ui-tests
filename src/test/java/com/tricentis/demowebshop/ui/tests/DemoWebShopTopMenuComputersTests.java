@@ -120,11 +120,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
-        });
-
-        step("Перейти на страницу стационарных компьютеров", () -> {
-            computersSection.goToDesktopsBrowsePage();
+            topMenuComputers.goToDesktopSubCategorySection();
         });
 
         step("Проверка отображения страницы стационарных компьютеров", () -> {
@@ -132,16 +128,5 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
     }
-
-    @Test
-    void computersDesktopsProductTest() {
-
-        open((""));
-        $("[href*='/computers']").hover();
-        $("[href*='/desktops']").click();
-        $("[class='product-grid']").should(appear);
-        $("[class='product-grid']").shouldBe(visible);
-    }
-
 
 }
