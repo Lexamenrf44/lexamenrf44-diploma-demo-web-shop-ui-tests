@@ -19,16 +19,16 @@ public class ComputersSection {
     }
 
     public ComputersSection checkComputersSectionTitle() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Computers"));
+        $(".page-category .page-title").should(appear);
+        $(".page-category .page-title").shouldBe(visible);
+        $(".page-category .page-title").shouldHave(text("Computers"));
 
         return this;
     }
 
     public ComputersSection checkComputersSectionSubCategories() {
-        $("[class='sub-category-grid']").should(appear);
-        $("[class='sub-category-grid']").should(visible);
+        $(".page-body .sub-category-grid").should(appear);
+        $(".page-body .sub-category-grid").should(visible);
         $$(".item-box").shouldHave(size(3));
         $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldHave(text("Desktops"));
         $(".page-body .sub-category-grid .item-box .title [href*='/notebooks']").shouldHave(text("Notebooks"));
@@ -48,36 +48,6 @@ public class ComputersSection {
         $("[class='page-title']").should(appear);
         $("[class='page-title']").shouldBe(visible);
         $("[class='page-title']").shouldHave(text("Desktops"));
-
-        return this;
-    }
-
-    public ComputersSection goToNotebooksBrowsePage() {
-
-        $("[alt='Picture for category Notebooks']").click();
-
-        return this;
-    }
-
-    public ComputersSection checkNotebooksSection() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Notebooks"));
-
-        return this;
-    }
-
-    public ComputersSection goToAccessoriesBrowsePage() {
-
-        $("[alt='Picture for category Accessories']").click();
-
-        return this;
-    }
-
-    public ComputersSection checkAccessoriesSection() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Accessories"));
 
         return this;
     }
