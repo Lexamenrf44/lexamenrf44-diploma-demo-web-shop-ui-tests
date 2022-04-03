@@ -1,4 +1,4 @@
-package com.tricentis.demowebshop.pages.leftsidemenu;
+package com.tricentis.demowebshop.ui.pages.leftsidemenu;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.visible;

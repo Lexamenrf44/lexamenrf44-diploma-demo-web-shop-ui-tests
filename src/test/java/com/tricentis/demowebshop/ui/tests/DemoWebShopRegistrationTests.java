@@ -1,4 +1,4 @@
-package com.tricentis.demowebshop.tests;
+package com.tricentis.demowebshop.ui.tests;
 
 public class DemoWebShopRegistrationTests {
 }

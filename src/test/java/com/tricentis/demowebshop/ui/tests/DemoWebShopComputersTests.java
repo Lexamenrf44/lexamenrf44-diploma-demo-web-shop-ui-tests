@@ -1,9 +1,9 @@
-package com.tricentis.demowebshop.tests;
+package com.tricentis.demowebshop.ui.tests;
 
-import com.tricentis.demowebshop.configuration.TestBase;
-import com.tricentis.demowebshop.pages.leftsidemenu.ComputersCategory;
-import com.tricentis.demowebshop.pages.topmenu.computers.Computers;
-import com.tricentis.demowebshop.pages.topmenu.computers.ComputersSection;
+import com.tricentis.demowebshop.ui.configuration.TestBase;
+import com.tricentis.demowebshop.ui.pages.leftsidemenu.ComputersCategory;
+import com.tricentis.demowebshop.ui.pages.topmenu.computers.Computers;
+import com.tricentis.demowebshop.ui.pages.topmenu.computers.ComputersSection;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 
