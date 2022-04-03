@@ -22,4 +22,12 @@ public class TopMenuComputers {
         return this;
     }
 
+    public TopMenuComputers goToDesktopSubCategorySection() {
+
+        $(".top-menu [href*='/computers']").hover();
+        $(withText("Desktops")).click();
+
+        return this;
+    }
+
 }
