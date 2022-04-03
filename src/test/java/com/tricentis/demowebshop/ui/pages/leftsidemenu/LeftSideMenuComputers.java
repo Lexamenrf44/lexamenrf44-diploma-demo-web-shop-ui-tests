@@ -4,9 +4,9 @@ import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class ComputersCategory {
+public class LeftSideMenuComputers {
 
-    public ComputersCategory checkLeftMenuComputersButton() {
+    public LeftSideMenuComputers checkLeftMenuComputersButton() {
         $(".block-category-navigation [href*='/computers']").should(appear);
         $(".block-category-navigation [href*='/computers']").shouldBe(visible);
 
