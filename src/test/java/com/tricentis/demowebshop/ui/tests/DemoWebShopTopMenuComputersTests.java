@@ -1,8 +1,9 @@
 package com.tricentis.demowebshop.ui.tests;
 
 import com.tricentis.demowebshop.ui.configuration.TestBase;
+import com.tricentis.demowebshop.ui.pages.DemoWebShop;
 import com.tricentis.demowebshop.ui.pages.leftsidemenu.ComputersCategory;
-import com.tricentis.demowebshop.ui.pages.topmenu.Computers;
+import com.tricentis.demowebshop.ui.pages.topmenu.TopMenuComputers;
 import com.tricentis.demowebshop.ui.pages.sections.ComputersSection;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
@@ -11,9 +12,10 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class DemoWebShopComputersTests extends TestBase {
+public class DemoWebShopTopMenuComputersTests extends TestBase {
 
-    Computers computers = new Computers();
+    DemoWebShop demoWebShop = new DemoWebShop();
+    TopMenuComputers topMenuComputers = new TopMenuComputers();
     ComputersCategory computersCategory = new ComputersCategory();
     ComputersSection computersSection = new ComputersSection();
 
@@ -26,11 +28,11 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersTopMenuComputersHoverButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            computers.openDemoWebShop();
+            demoWebShop.openDemoWebShop();
         });
 
         step("Проверка отображения ховера 'Computers'", () -> {
-            computers.checkTopMenuComputersHoverButton();
+            topMenuComputers.checkTopMenuComputersHoverButton();
         });
 
     }
@@ -44,7 +46,7 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersCategoryLeftMenuComputersButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            computers.openDemoWebShop();
+            demoWebShop.openDemoWebShop();
         });
 
         step("Проверка отображения кнопки 'Computers' в боковом меню категорий", () -> {
@@ -62,23 +64,23 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersSectionTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            computers.openDemoWebShop();
+            demoWebShop.openDemoWebShop();
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.goToComputersSection();
+            topMenuComputers.goToComputersSection();
         });
 
         step("Проверка отображения страницы компьютеров", () -> {
-            computers.checkComputersSectionPage();
+            topMenuComputers.checkComputersSectionPage();
         });
 
         step("Проверка отображения заголовка страницы компьютеров", () -> {
-            computers.checkComputersSectionTitle();
+            topMenuComputers.checkComputersSectionTitle();
         });
 
         step("Проверка отображения подкатегорий на странице компьютеров", () -> {
-            computers.checkComputersSectionSubCategories();
+            topMenuComputers.checkComputersSectionSubCategories();
         });
 
     }
@@ -92,19 +94,19 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersDesktopsBrowsePageTest() {
 
         step("Открыть Demo Web Shop", () -> {
-            computers.openDemoWebShop();
+            demoWebShop.openDemoWebShop();
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.goToComputersSection();
+            topMenuComputers.goToComputersSection();
         });
 
         step("Перейти на страницу стационарных компьютеров", () -> {
-            computers.goToDesktopsBrowsePage();
+            topMenuComputers.goToDesktopsBrowsePage();
         });
 
         step("Проверка отображения страницы стационарных компьютеров", () -> {
-            computers.checkDesktopsSection();
+            topMenuComputers.checkDesktopsSection();
         });
 
     }
@@ -118,19 +120,19 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersNotebooksBrowsePageTest() {
 
         step("Открыть Demo Web Shop", () -> {
-            computers.openDemoWebShop();
+            demoWebShop.openDemoWebShop();
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.goToComputersSection();
+            topMenuComputers.goToComputersSection();
         });
 
         step("Перейти на страницу ноутбуков", () -> {
-            computers.goToNotebooksBrowsePage();
+            topMenuComputers.goToNotebooksBrowsePage();
         });
 
         step("Проверка отображения страницы 'Desktops'", () -> {
-            computers.checkNotebooksSection();
+            topMenuComputers.checkNotebooksSection();
         });
 
     }
@@ -144,19 +146,19 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersAccessoriesBrowsePageTest() {
 
         step("Открыть Demo Web Shop", () -> {
-            computers.openDemoWebShop();
+            demoWebShop.openDemoWebShop();
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            computers.goToComputersSection();
+            topMenuComputers.goToComputersSection();
         });
 
         step("Перейти на страницу аксессуаров", () -> {
-            computers.goToAccessoriesBrowsePage();
+            topMenuComputers.goToAccessoriesBrowsePage();
         });
 
         step("Проверка отображения страницы аксессуаров", () -> {
-            computers.checkAccessoriesSection();
+            topMenuComputers.checkAccessoriesSection();
         });
 
     }
