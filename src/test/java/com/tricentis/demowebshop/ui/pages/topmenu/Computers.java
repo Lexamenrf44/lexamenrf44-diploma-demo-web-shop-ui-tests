@@ -1,4 +1,4 @@
-package com.tricentis.demowebshop.ui.pages.topmenu.computers;
+package com.tricentis.demowebshop.ui.pages.topmenu;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.*;
