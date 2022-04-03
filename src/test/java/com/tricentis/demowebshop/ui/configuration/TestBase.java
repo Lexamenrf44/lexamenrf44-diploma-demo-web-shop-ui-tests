@@ -3,7 +3,7 @@ package com.tricentis.demowebshop.ui.configuration;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import com.tricentis.demowebshop.ui.tools.Attach;
+import com.tricentis.demowebshop.ui.tools.AllureReportAttachments;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -46,10 +46,10 @@ public class TestBase {
     @AfterEach
     void addAttachments() {
 
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
+        AllureReportAttachments.screenshotAs("Last screenshot");
+        AllureReportAttachments.pageSource();
+        AllureReportAttachments.browserConsoleLogs();
+        AllureReportAttachments.addVideo();
         closeWebDriver();
 
     }
