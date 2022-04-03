@@ -80,15 +80,15 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Проверка отображения подкатегорий на странице компьютеров", () -> {
-            computersSection.checkComputersSectionSubCategories();
+            computersSection.checkComputersSectionMainPageSubCategories();
         });
 
     }
 
     @Owner("lexamenrf44")
     @Feature("Computers")
-    @Story("Реализовать отдельную страницу для стационарных компьютеров")
-    @DisplayName("Тестирование отображения страницы стационарных компьютеров в секции компьютеров")
+    @Story("В левом меню, в категории компьютеры, реализовать подкатегории для секции компьютеров")
+    @DisplayName("Тестирование отображения подкатегорий в левом меню в секции компьютеров")
     @Severity(SeverityLevel.CRITICAL)
     @Test
     void computersSectionLeftSideMenuSubCategoriesTest() {
@@ -98,15 +98,11 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
+            leftSideMenuComputers.goToComputersSection();
         });
 
-        step("Перейти на страницу стационарных компьютеров", () -> {
-            computersSection.goToDesktopsBrowsePage();
-        });
-
-        step("Проверка отображения страницы стационарных компьютеров", () -> {
-            computersSection.checkDesktopsSection();
+        step("Проверка отображения подкатегорий в левом меню на странице компьютеров", () -> {
+            computersSection.checkComputersSectionLeftSideMenuSubCategories();
         });
 
     }
