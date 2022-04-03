@@ -1,7 +1,5 @@
 package com.tricentis.demowebshop.ui.pages.sections;
 
-import com.tricentis.demowebshop.ui.pages.topmenu.TopMenuComputers;
-
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.text;
@@ -26,13 +24,23 @@ public class ComputersSection {
         return this;
     }
 
-    public ComputersSection checkComputersSectionSubCategories() {
+    public ComputersSection checkComputersSectionMainPageSubCategories() {
         $(".page-body .sub-category-grid").should(appear);
         $(".page-body .sub-category-grid").should(visible);
         $$(".item-box").shouldHave(size(3));
         $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldHave(text("Desktops"));
         $(".page-body .sub-category-grid .item-box .title [href*='/notebooks']").shouldHave(text("Notebooks"));
         $(".page-body .sub-category-grid .item-box .title [href*='/accessories']").shouldHave(text("Accessories"));
+
+        return this;
+    }
+
+    public ComputersSection checkComputersSectionLeftSideMenuSubCategories() {
+        $(".block-category-navigation .list .active [href*='/computers']").shouldHave(text("Computers"));
+        $$(".block-category-navigation .list .sublist .inactive").shouldHave(size(3));
+        $(".block-category-navigation .list .sublist .inactive [href*='/desktops']").shouldHave(text("Desktops"));
+        $(".block-category-navigation .list .sublist .inactive [href*='/notebooks']").shouldHave(text("Notebooks"));
+        $(".block-category-navigation .list .sublist .inactive [href*='/accessories']").shouldHave(text("Accessories"));
 
         return this;
     }
