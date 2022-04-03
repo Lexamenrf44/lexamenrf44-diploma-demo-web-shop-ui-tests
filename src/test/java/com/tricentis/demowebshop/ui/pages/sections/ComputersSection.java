@@ -10,13 +10,6 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class ComputersSection {
 
-    public ComputersSection goToComputersSection() {
-
-        $(".top-menu [href*='/computers']").click();
-
-        return this;
-    }
-
     public ComputersSection checkComputersSectionPage() {
         $("[class='page category-page']").should(appear);
         $("[class='page category-page']").shouldBe(visible);
