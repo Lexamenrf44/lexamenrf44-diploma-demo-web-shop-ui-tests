@@ -91,7 +91,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     @DisplayName("Тестирование отображения страницы стационарных компьютеров в секции компьютеров")
     @Severity(SeverityLevel.CRITICAL)
     @Test
-    void computersDesktopsBrowsePageTest() {
+    void computersSectionLeftSideMenuSubCategoriesTest() {
 
         step("Открыть Demo Web Shop", () -> {
             demoWebShop.openDemoWebShop();
@@ -113,11 +113,11 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
 
     @Owner("lexamenrf44")
     @Feature("Computers")
-    @Story("Реализовать отдельную страницу для ноутбуков")
-    @DisplayName("Тестирование отображения страницы ноутбуков в секции компьютеров")
+    @Story("Реализовать отдельную страницу для стационарных компьютеров")
+    @DisplayName("Тестирование отображения страницы стационарных компьютеров в секции компьютеров")
     @Severity(SeverityLevel.CRITICAL)
     @Test
-    void computersNotebooksBrowsePageTest() {
+    void computersDesktopsBrowsePageTest() {
 
         step("Открыть Demo Web Shop", () -> {
             demoWebShop.openDemoWebShop();
@@ -127,38 +127,12 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
             topMenuComputers.goToComputersSection();
         });
 
-        step("Перейти на страницу ноутбуков", () -> {
-            computersSection.goToNotebooksBrowsePage();
+        step("Перейти на страницу стационарных компьютеров", () -> {
+            computersSection.goToDesktopsBrowsePage();
         });
 
-        step("Проверка отображения страницы 'Desktops'", () -> {
-            computersSection.checkNotebooksSection();
-        });
-
-    }
-
-    @Owner("lexamenrf44")
-    @Feature("Computers")
-    @Story("Реализовать отдельную страницу для аксессуаров")
-    @DisplayName("Тестирование отображения страницы аксессуаров в секции компьютеров")
-    @Severity(SeverityLevel.CRITICAL)
-    @Test
-    void computersAccessoriesBrowsePageTest() {
-
-        step("Открыть Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
-        });
-
-        step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
-        });
-
-        step("Перейти на страницу аксессуаров", () -> {
-            computersSection.goToAccessoriesBrowsePage();
-        });
-
-        step("Проверка отображения страницы аксессуаров", () -> {
-            computersSection.checkAccessoriesSection();
+        step("Проверка отображения страницы стационарных компьютеров", () -> {
+            computersSection.checkDesktopsSection();
         });
 
     }
