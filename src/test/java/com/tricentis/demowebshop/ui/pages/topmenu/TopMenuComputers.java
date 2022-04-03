@@ -25,48 +25,4 @@ public class TopMenuComputers {
         return this;
     }
 
-    public TopMenuComputers goToDesktopsBrowsePage() {
-
-        $("[alt='Picture for category Desktops']").click();
-
-        return this;
-    }
-
-    public TopMenuComputers checkDesktopsSection() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Desktops"));
-
-        return this;
-    }
-
-    public TopMenuComputers goToNotebooksBrowsePage() {
-
-        $("[alt='Picture for category Notebooks']").click();
-
-        return this;
-    }
-
-    public TopMenuComputers checkNotebooksSection() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Notebooks"));
-
-        return this;
-    }
-
-    public TopMenuComputers goToAccessoriesBrowsePage() {
-
-        $("[alt='Picture for category Accessories']").click();
-
-        return this;
-    }
-
-    public TopMenuComputers checkAccessoriesSection() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Accessories"));
-
-        return this;
-    }
 }
