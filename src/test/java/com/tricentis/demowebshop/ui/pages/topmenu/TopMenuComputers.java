@@ -16,40 +16,6 @@ public class TopMenuComputers {
         return this;
     }
 
-    public TopMenuComputers goToComputersSection() {
-
-        $(".top-menu [href*='/computers']").click();
-
-        return this;
-    }
-
-    public TopMenuComputers checkComputersSectionPage() {
-        $("[class='page category-page']").should(appear);
-        $("[class='page category-page']").shouldBe(visible);
-
-
-        return this;
-    }
-
-    public TopMenuComputers checkComputersSectionTitle() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Computers"));
-
-        return this;
-    }
-
-    public TopMenuComputers checkComputersSectionSubCategories() {
-        $("[class='sub-category-grid']").should(appear);
-        $("[class='sub-category-grid']").should(visible);
-        $$(".item-box").shouldHave(size(3));
-        $(".page-body .sub-category-grid .item-box .title [href*='/desktops']").shouldHave(text("Desktops"));
-        $(".page-body .sub-category-grid .item-box .title [href*='/notebooks']").shouldHave(text("Notebooks"));
-        $(".page-body .sub-category-grid .item-box .title [href*='/accessories']").shouldHave(text("Accessories"));
-
-        return this;
-    }
-
     public TopMenuComputers goToDesktopsBrowsePage() {
 
         $("[alt='Picture for category Desktops']").click();
