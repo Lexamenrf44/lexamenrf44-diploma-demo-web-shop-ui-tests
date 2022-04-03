@@ -2,7 +2,7 @@ package com.tricentis.demowebshop.ui.tests;
 
 import com.tricentis.demowebshop.ui.configuration.TestBase;
 import com.tricentis.demowebshop.ui.pages.DemoWebShop;
-import com.tricentis.demowebshop.ui.pages.leftsidemenu.ComputersCategory;
+import com.tricentis.demowebshop.ui.pages.leftsidemenu.LeftSideMenuComputers;
 import com.tricentis.demowebshop.ui.pages.topmenu.TopMenuComputers;
 import com.tricentis.demowebshop.ui.pages.sections.ComputersSection;
 import io.qameta.allure.*;
@@ -16,7 +16,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
 
     DemoWebShop demoWebShop = new DemoWebShop();
     TopMenuComputers topMenuComputers = new TopMenuComputers();
-    ComputersCategory computersCategory = new ComputersCategory();
+    LeftSideMenuComputers leftSideMenuComputers = new LeftSideMenuComputers();
     ComputersSection computersSection = new ComputersSection();
 
     @Owner("lexamenrf44")
@@ -50,7 +50,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Проверка отображения кнопки 'Computers' в боковом меню категорий", () -> {
-            computersCategory.checkLeftMenuComputersButton();
+            leftSideMenuComputers.checkLeftMenuComputersButton();
         });
 
     }
