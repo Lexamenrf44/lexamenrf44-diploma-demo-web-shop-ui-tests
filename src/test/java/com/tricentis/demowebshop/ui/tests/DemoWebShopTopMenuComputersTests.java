@@ -21,7 +21,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     @Feature("Computers")
     @Story("На главной странице, в верхнем панели меню реализовать ховер-кнопку, ведущую на страницу компьютеров")
     @DisplayName("Тестирование отображения ховер-кнопки 'Computers' в верхнем меню")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void computersTopMenuComputersHoverButtonTest() {
 
@@ -39,7 +39,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     @Feature("Computers")
     @Story("На главной странице, в левой боковой панели категорий реализовать кнопку, ведущую на страницу компьютеров")
     @DisplayName("Тестирование отображения кнопки 'Computers' в левом боковом меню")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void computersCategoryLeftMenuComputersButtonTest() {
 
@@ -57,7 +57,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     @Feature("Computers")
     @Story("Реализовать отдельную страницу для компьютеров")
     @DisplayName("Тестирование отображения страницы 'Computers'")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     void computersSectionTest() {
 
@@ -87,7 +87,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     @Feature("Computers")
     @Story("В левом меню, в категории компьютеры, реализовать подкатегории для секции компьютеров")
     @DisplayName("Тестирование отображения подкатегорий в левом меню в секции компьютеров")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void computersSectionLeftSideMenuSubCategoriesTest() {
 
@@ -109,7 +109,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     @Feature("Computers")
     @Story("Реализовать отдельную страницу для стационарных компьютеров")
     @DisplayName("Тестирование отображения страницы стационарных компьютеров в секции компьютеров")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Test
     void computersDesktopsBrowsePageTest() {
 
