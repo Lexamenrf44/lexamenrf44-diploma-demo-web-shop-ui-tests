@@ -20,7 +20,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     ComputersSection computersSection = new ComputersSection();
 
     @Owner("lexamenrf44")
-    @Feature("Computers section")
+    @Feature("Computers")
     @Story("На главной странице, в верхнем панели меню реализовать ховер-кнопку, ведущую на страницу компьютеров")
     @DisplayName("Тестирование отображения ховер-кнопки 'Computers' в верхнем меню")
     @Severity(SeverityLevel.BLOCKER)
@@ -38,7 +38,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     }
 
     @Owner("lexamenrf44")
-    @Feature("Computers section")
+    @Feature("Computers")
     @Story("На главной странице, в левой боковой панели категорий реализовать кнопку, ведущую на страницу компьютеров")
     @DisplayName("Тестирование отображения кнопки 'Computers' в левом боковом меню")
     @Severity(SeverityLevel.BLOCKER)
@@ -56,7 +56,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     }
 
     @Owner("lexamenrf44")
-    @Feature("Computers section")
+    @Feature("Computers")
     @Story("Реализовать отдельную страницу для компьютеров")
     @DisplayName("Тестирование отображения страницы 'Computers'")
     @Severity(SeverityLevel.BLOCKER)
@@ -68,25 +68,25 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
+            computersSection.goToComputersSection();
         });
 
         step("Проверка отображения страницы компьютеров", () -> {
-            topMenuComputers.checkComputersSectionPage();
+            computersSection.checkComputersSectionPage();
         });
 
         step("Проверка отображения заголовка страницы компьютеров", () -> {
-            topMenuComputers.checkComputersSectionTitle();
+            computersSection.checkComputersSectionTitle();
         });
 
         step("Проверка отображения подкатегорий на странице компьютеров", () -> {
-            topMenuComputers.checkComputersSectionSubCategories();
+            computersSection.checkComputersSectionSubCategories();
         });
 
     }
 
     @Owner("lexamenrf44")
-    @Feature("Computers section")
+    @Feature("Computers")
     @Story("Реализовать отдельную страницу для стационарных компьютеров")
     @DisplayName("Тестирование отображения страницы стационарных компьютеров в секции компьютеров")
     @Severity(SeverityLevel.CRITICAL)
@@ -98,7 +98,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
+            computersSection.goToComputersSection();
         });
 
         step("Перейти на страницу стационарных компьютеров", () -> {
@@ -112,7 +112,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     }
 
     @Owner("lexamenrf44")
-    @Feature("Computers section")
+    @Feature("Computers")
     @Story("Реализовать отдельную страницу для ноутбуков")
     @DisplayName("Тестирование отображения страницы ноутбуков в секции компьютеров")
     @Severity(SeverityLevel.CRITICAL)
@@ -124,7 +124,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
+            computersSection.goToComputersSection();
         });
 
         step("Перейти на страницу ноутбуков", () -> {
@@ -138,7 +138,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
     }
 
     @Owner("lexamenrf44")
-    @Feature("Computers section")
+    @Feature("Computers")
     @Story("Реализовать отдельную страницу для аксессуаров")
     @DisplayName("Тестирование отображения страницы аксессуаров в секции компьютеров")
     @Severity(SeverityLevel.CRITICAL)
@@ -150,7 +150,7 @@ public class DemoWebShopTopMenuComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
+            computersSection.goToComputersSection();
         });
 
         step("Перейти на страницу аксессуаров", () -> {
