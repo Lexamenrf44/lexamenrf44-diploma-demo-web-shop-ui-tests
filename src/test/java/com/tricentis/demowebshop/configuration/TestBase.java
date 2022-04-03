@@ -6,9 +6,10 @@ import io.qameta.allure.selenide.AllureSelenide;
 import com.tricentis.demowebshop.helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
 
@@ -36,6 +37,12 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
     }
 
+    @BeforeEach
+    public void beforeEach(){
+        open("");
+        visualizeMouseClick();
+    }
+
     @AfterEach
     void addAttachments() {
 
@@ -45,6 +52,17 @@ public class TestBase {
         Attach.addVideo();
         closeWebDriver();
 
+    }
+
+    public void visualizeMouseClick(){
+        executeJavaScript("function onClick(event) {\n" +
+                "        var e = event || window.event;\n" +
+                "        var target = e.target || e.srcElement;\n" +
+                "        target.style['box-sizing'] = 'border-box';\n" +
+                "        target.style['border'] = '2px solid green';\n" +
+                "      }\n" +
+                "    \n" +
+                "      document.addEventListener('click', onClick);");
     }
 
 }
