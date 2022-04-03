@@ -13,4 +13,10 @@ public class LeftSideMenuComputers {
         return this;
     }
 
+    public LeftSideMenuComputers goToComputersSection() {
+        $(".block-category-navigation .list [href*='/computers']").click();
+
+        return this;
+    }
+
 }
