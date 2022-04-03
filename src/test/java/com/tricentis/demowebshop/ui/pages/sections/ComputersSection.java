@@ -45,13 +45,6 @@ public class ComputersSection {
         return this;
     }
 
-    public ComputersSection goToDesktopsBrowsePage() {
-
-        $("[alt='Picture for category Desktops']").click();
-
-        return this;
-    }
-
     public ComputersSection checkDesktopsSection() {
         $("[class='page-title']").should(appear);
         $("[class='page-title']").shouldBe(visible);
