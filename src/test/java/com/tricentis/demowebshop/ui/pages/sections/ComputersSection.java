@@ -46,9 +46,13 @@ public class ComputersSection {
     }
 
     public ComputersSection checkDesktopsSection() {
-        $("[class='page-title']").should(appear);
-        $("[class='page-title']").shouldBe(visible);
-        $("[class='page-title']").shouldHave(text("Desktops"));
+        $(".category-page .page-title").should(appear);
+        $(".category-page .page-title").shouldBe(visible);
+        $(".category-page .page-title").shouldHave(text("Desktops"));
+        $(".category-page .page-body").should(appear);
+        $(".category-page .page-body").shouldBe(visible);
+        $(".page-body .product-grid").should(appear);
+        $(".page-body .product-grid").shouldBe(visible);
 
         return this;
     }
