@@ -10,7 +10,7 @@ import org.junit.jupiter.api.*;
 
 import static io.qameta.allure.Allure.step;
 
-public class DemoWebShopTopMenuComputersTests extends TestBase {
+public class DemoWebShopComputersTests extends TestBase {
 
     DemoWebShop demoWebShop = new DemoWebShop();
     TopMenuComputers topMenuComputers = new TopMenuComputers();
