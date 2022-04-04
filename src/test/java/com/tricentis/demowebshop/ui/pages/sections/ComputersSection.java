@@ -17,9 +17,9 @@ public class ComputersSection {
     }
 
     public ComputersSection checkComputersSectionTitle() {
-        $(".page-category .page-title").should(appear);
-        $(".page-category .page-title").shouldBe(visible);
-        $(".page-category .page-title").shouldHave(text("Computers"));
+        $(".category-page .page-title").should(appear);
+        $(".category-page .page-title").shouldBe(visible);
+        $(".category-page .page-title").shouldHave(text("Computers"));
 
         return this;
     }
