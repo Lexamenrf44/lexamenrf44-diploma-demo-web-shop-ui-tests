@@ -9,11 +9,12 @@ import static com.codeborne.selenide.Selenide.$;
 public class RegistrationForm {
 
     SelenideElement genderRadio = $(".inputs").shouldHave(text("Gender")),
-            firstNameInput = $("#firstName"),
-            lastNameInput = $("#lastName"),
-            emailInput = $("#userEmail"),
-            passwordInput = $("#userNumber"),
-            registerButton = $(".register-next-step-button");
+            firstNameInput = $("#FirstName"),
+            lastNameInput = $("#LastName"),
+            emailInput = $("Email"),
+            passwordInput = $("#Password"),
+            passwordConfirmInput = $("#ConfirmPassword"),
+            registerButton = $(".register-button");
 
     public RegistrationForm goToRegistrationPage() {
 
