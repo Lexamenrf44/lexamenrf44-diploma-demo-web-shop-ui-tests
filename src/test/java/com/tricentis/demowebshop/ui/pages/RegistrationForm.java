@@ -13,8 +13,7 @@ public class RegistrationForm {
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
             passwordInput = $("#userNumber"),
-            confirmPasswordInput = $("#subjectsInput"),
-            submitButton = $(".table-responsive");
+            registerButton = $(".register-next-step-button");
 
     public RegistrationForm goToRegistrationPage() {
 
@@ -54,6 +53,24 @@ public class RegistrationForm {
 
     public RegistrationForm enterUserEmail(String email) {
         emailInput.setValue(email);
+
+        return this;
+    }
+
+    public RegistrationForm enterPassword(String password) {
+        passwordInput.setValue(password);
+
+        return this;
+    }
+
+    public RegistrationForm enterConfirmPassword(String password) {
+        passwordInput.setValue(password);
+
+        return this;
+    }
+
+    public RegistrationForm submitUserRegistrationForm() {
+        registerButton.click();
 
         return this;
     }
