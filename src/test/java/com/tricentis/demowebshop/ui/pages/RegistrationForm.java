@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationForm {
 
-    SelenideElement genderRadio = $("#genterWrapper"),
+    SelenideElement genderRadio = $(".inputs").shouldHave(text("Gender")),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
@@ -33,8 +33,8 @@ public class RegistrationForm {
         return this;
     }
 
-    public RegistrationForm selectUserGender(String gender) {
-        genderRadio.find(byText(gender)).click();
+    public RegistrationForm selectUserGender(String Gender) {
+        genderRadio.find(byText(Gender)).click();
 
         return this;
     }
