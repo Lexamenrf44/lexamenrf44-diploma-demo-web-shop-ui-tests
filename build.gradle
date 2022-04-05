@@ -31,7 +31,7 @@ allure {
 
 dependencies {
 
-    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation "com.github.javafaker:javafaker:$fakerVersion"
 
     testImplementation(
             "com.codeborne:selenide:$selenideVersion",
