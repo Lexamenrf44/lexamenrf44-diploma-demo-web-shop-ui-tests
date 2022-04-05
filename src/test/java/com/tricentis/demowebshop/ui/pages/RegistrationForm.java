@@ -65,7 +65,7 @@ public class RegistrationForm {
     }
 
     public RegistrationForm enterConfirmPassword(String password) {
-        passwordInput.setValue(password);
+        passwordConfirmInput.setValue(password);
 
         return this;
     }
