@@ -2,6 +2,7 @@ package com.tricentis.demowebshop.ui.tests;
 
 import com.tricentis.demowebshop.ui.configuration.TestBase;
 import com.tricentis.demowebshop.ui.pages.DemoWebShop;
+import com.tricentis.demowebshop.ui.pages.RegistrationForm;
 import com.tricentis.demowebshop.ui.pages.leftsidemenu.LeftSideMenuComputers;
 import com.tricentis.demowebshop.ui.pages.topmenu.TopMenuComputers;
 import com.tricentis.demowebshop.ui.pages.sections.ComputersSection;
