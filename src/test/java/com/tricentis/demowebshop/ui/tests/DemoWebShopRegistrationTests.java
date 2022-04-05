@@ -59,12 +59,8 @@ public class DemoWebShopRegistrationTests extends TestBase {
             registrationForm.goToRegistrationPage();
         });
 
-        step("Проверка отображения формы регистрации Demo Web Shop", () -> {
+        step("Отправить форму регистрации пользователя", () -> {
             registrationForm.submitUserRegistrationForm();
-        });
-
-        step("Проверка отображения формы регистрации Demo Web Shop", () -> {
-            registrationForm.checkRegistrationPage();
         });
     }
 
