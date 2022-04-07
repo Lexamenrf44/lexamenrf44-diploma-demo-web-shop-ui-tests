@@ -8,13 +8,13 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationForm {
 
-    SelenideElement genderRadio = $(".inputs").shouldHave(text("Gender")),
+    SelenideElement genderRadio = $(".inputs"),
             firstNameInput = $("#FirstName"),
             lastNameInput = $("#LastName"),
             emailInput = $("Email"),
             passwordInput = $("#Password"),
             passwordConfirmInput = $("#ConfirmPassword"),
-            registerButton = $(".register-button");
+            registerButton = $(".register-next-step-button");
 
     public RegistrationForm goToRegistrationPage() {
 
@@ -34,8 +34,8 @@ public class RegistrationForm {
         return this;
     }
 
-    public RegistrationForm selectUserGender(String Gender) {
-        genderRadio.find(byText(Gender)).click();
+    public RegistrationForm selectUserGender(String gender) {
+        genderRadio.find(byText(gender)).click();
 
         return this;
     }
@@ -72,6 +72,12 @@ public class RegistrationForm {
 
     public RegistrationForm submitUserRegistrationForm() {
         registerButton.click();
+
+        return this;
+    }
+
+    public RegistrationForm checkFirstNameField() {
+       $("span [for='FirstName']").shouldHave(text("First name is required."));
 
         return this;
     }
