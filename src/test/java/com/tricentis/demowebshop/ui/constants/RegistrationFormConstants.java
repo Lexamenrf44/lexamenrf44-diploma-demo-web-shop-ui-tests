@@ -4,8 +4,8 @@ public class RegistrationFormConstants {
 
     public static class Gender {
 
-        public static final String MALE = "M";
-        public static final String FEMALE = "F";
+        public static final String MALE = "Male";
+        public static final String FEMALE = "Female";
 
     }
 
