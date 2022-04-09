@@ -117,8 +117,12 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
             registrationFormPage.submitUserRegistrationForm();
         });
 
-        step("Проверка успешной регистрации пользователя", () -> {
+        step("Проверка формы успешной регистрации нового пользователя", () -> {
             registrationFormPage.checkSuccessfulRegistration();
+        });
+
+        step("Проверка формы нового пользователя", () -> {
+            registrationFormPage.checkRegisteredUserLogin(email);
         });
     }
 
