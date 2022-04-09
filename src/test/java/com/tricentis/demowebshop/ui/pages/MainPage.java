@@ -2,9 +2,9 @@ package com.tricentis.demowebshop.ui.pages;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class DemoWebShop {
+public class MainPage {
 
-    public DemoWebShop openDemoWebShop() {
+    public MainPage openDemoWebShop() {
 
         open((""));
 
