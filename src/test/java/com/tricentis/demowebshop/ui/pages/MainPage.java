@@ -4,9 +4,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
 
-    public MainPage openDemoWebShop() {
-        open((""));
-
+    public MainPage openDemoWebShop() { open((""));
         return this;
     }
 
