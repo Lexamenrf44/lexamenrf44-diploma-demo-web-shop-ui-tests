@@ -104,6 +104,7 @@ public class RegistrationFormPage {
 
         return this;
     }
+
     public RegistrationFormPage checkRegistrationEmail(String email) { registeredUser.shouldHave(text(email));
         return this;
     }
