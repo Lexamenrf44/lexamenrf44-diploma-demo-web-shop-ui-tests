@@ -22,9 +22,7 @@ public class TopMenuComponent {
         return this;
     }
 
-    public TopMenuComponent goToComputersSection() {
-        computersHoverButton.click();
-
+    public TopMenuComponent goToComputersSection() { computersHoverButton.click();
         return this;
     }
 
