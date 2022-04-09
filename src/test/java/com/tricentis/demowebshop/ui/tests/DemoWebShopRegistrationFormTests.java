@@ -2,20 +2,19 @@ package com.tricentis.demowebshop.ui.tests;
 
 import com.github.javafaker.Faker;
 import com.tricentis.demowebshop.ui.configuration.TestBase;
-import com.tricentis.demowebshop.ui.pages.DemoWebShop;
-import com.tricentis.demowebshop.ui.pages.RegistrationForm;
+import com.tricentis.demowebshop.ui.pages.MainPage;
+import com.tricentis.demowebshop.ui.pages.RegistrationFormPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.tricentis.demowebshop.ui.constants.RegistrationFormConstants.Gender.FEMALE;
-import static com.tricentis.demowebshop.ui.constants.RegistrationFormConstants.Gender.MALE;
 import static io.qameta.allure.Allure.step;
 
-public class DemoWebShopRegistrationTests extends TestBase {
+public class DemoWebShopRegistrationFormTests extends TestBase {
 
-    DemoWebShop demoWebShop = new DemoWebShop();
-    RegistrationForm registrationForm = new RegistrationForm();
+    MainPage mainPage = new MainPage();
+    RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
     Faker faker = new Faker();
     String firstName = faker.name().firstName();
@@ -33,15 +32,15 @@ public class DemoWebShopRegistrationTests extends TestBase {
     void registrationPageTest() {
 
         step("Открыть Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Переход на форму регистрации Demo Web Shop", () -> {
-            registrationForm.goToRegistrationPage();
+            registrationFormPage.goToRegistrationPage();
         });
 
         step("Проверка отображения формы регистрации Demo Web Shop", () -> {
-            registrationForm.checkRegistrationPage();
+            registrationFormPage.checkRegistrationPage();
         });
     }
 
@@ -54,15 +53,15 @@ public class DemoWebShopRegistrationTests extends TestBase {
     void registrationEmptyPageSubmitTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Переход на форму регистрации Demo Web Shop", () -> {
-            registrationForm.goToRegistrationPage();
+            registrationFormPage.goToRegistrationPage();
         });
 
         step("Отправить форму регистрации пользователя", () -> {
-            registrationForm.submitUserRegistrationForm();
+            registrationFormPage.submitUserRegistrationForm();
         });
     }
 
@@ -75,23 +74,23 @@ public class DemoWebShopRegistrationTests extends TestBase {
     void registrationGenderSelectTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Переход на форму регистрации Demo Web Shop", () -> {
-            registrationForm.goToRegistrationPage();
+            registrationFormPage.goToRegistrationPage();
         });
 
         step("Выбрать пол", () -> {
-            registrationForm.selectUserGender(FEMALE);
+            registrationFormPage.selectUserGender(FEMALE);
         });
 
         step("Отправить форму регистрации пользователя", () -> {
-            registrationForm.submitUserRegistrationForm();
+            registrationFormPage.submitUserRegistrationForm();
         });
 
         step("Проверить поле Имя", () -> {
-            registrationForm.checkFirstNameField();
+            registrationFormPage.checkFirstNameField();
         });
     }
 
