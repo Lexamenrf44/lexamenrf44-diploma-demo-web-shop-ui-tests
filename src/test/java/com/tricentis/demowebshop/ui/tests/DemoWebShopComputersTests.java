@@ -2,8 +2,7 @@ package com.tricentis.demowebshop.ui.tests;
 
 import com.tricentis.demowebshop.ui.configuration.TestBase;
 import com.tricentis.demowebshop.ui.pages.DemoWebShop;
-import com.tricentis.demowebshop.ui.pages.RegistrationForm;
-import com.tricentis.demowebshop.ui.pages.leftsidemenu.LeftSideMenuComputers;
+import com.tricentis.demowebshop.ui.pages.components.LeftSideMenuComponent;
 import com.tricentis.demowebshop.ui.pages.topmenu.TopMenuComputers;
 import com.tricentis.demowebshop.ui.pages.sections.ComputersSection;
 import io.qameta.allure.*;
@@ -15,15 +14,15 @@ public class DemoWebShopComputersTests extends TestBase {
 
     DemoWebShop demoWebShop = new DemoWebShop();
     TopMenuComputers topMenuComputers = new TopMenuComputers();
-    LeftSideMenuComputers leftSideMenuComputers = new LeftSideMenuComputers();
+    LeftSideMenuComponent leftSideMenuComponent = new LeftSideMenuComponent();
     ComputersSection computersSection = new ComputersSection();
 
+    @Test
     @Owner("lexamenrf44")
     @Feature("Computers")
     @Story("На главной странице, в верхнем панели меню реализовать ховер-кнопку, ведущую на страницу компьютеров")
-    @DisplayName("Тестирование отображения ховер-кнопки 'Computers' в верхнем меню")
     @Severity(SeverityLevel.NORMAL)
-    @Test
+    @DisplayName("Тестирование отображения ховер-кнопки 'Computers' в верхнем меню")
     void computersTopMenuComputersHoverButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
@@ -36,12 +35,12 @@ public class DemoWebShopComputersTests extends TestBase {
 
     }
 
+    @Test
     @Owner("lexamenrf44")
     @Feature("Computers")
     @Story("На главной странице, в левой боковой панели категорий реализовать кнопку, ведущую на страницу компьютеров")
-    @DisplayName("Тестирование отображения кнопки 'Computers' в левом боковом меню")
     @Severity(SeverityLevel.NORMAL)
-    @Test
+    @DisplayName("Тестирование отображения кнопки 'Computers' в левом боковом меню")
     void computersCategoryLeftMenuComputersButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
@@ -49,17 +48,17 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Проверка отображения кнопки 'Computers' в боковом меню категорий", () -> {
-            leftSideMenuComputers.checkLeftMenuComputersButton();
+            leftSideMenuComponent.checkLeftMenuComputersButton();
         });
 
     }
 
+    @Test
     @Owner("lexamenrf44")
     @Feature("Computers")
     @Story("Реализовать отдельную страницу для компьютеров")
-    @DisplayName("Тестирование отображения страницы 'Computers'")
     @Severity(SeverityLevel.CRITICAL)
-    @Test
+    @DisplayName("Тестирование отображения страницы 'Computers'")
     void computersSectionTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
@@ -84,12 +83,12 @@ public class DemoWebShopComputersTests extends TestBase {
 
     }
 
+    @Test
     @Owner("lexamenrf44")
     @Feature("Computers")
     @Story("В левом меню, в категории компьютеры, реализовать подкатегории для секции компьютеров")
-    @DisplayName("Тестирование отображения подкатегорий в левом меню в секции компьютеров")
     @Severity(SeverityLevel.NORMAL)
-    @Test
+    @DisplayName("Тестирование отображения подкатегорий в левом меню в секции компьютеров")
     void computersSectionLeftSideMenuSubCategoriesTest() {
 
         step("Открыть Demo Web Shop", () -> {
@@ -97,7 +96,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            leftSideMenuComputers.goToComputersSection();
+            leftSideMenuComponent.goToComputersSection();
         });
 
         step("Проверка отображения подкатегорий в левом меню на странице компьютеров", () -> {
@@ -106,12 +105,12 @@ public class DemoWebShopComputersTests extends TestBase {
 
     }
 
+    @Test
     @Owner("lexamenrf44")
     @Feature("Computers")
     @Story("Реализовать отдельную страницу для стационарных компьютеров")
-    @DisplayName("Тестирование отображения страницы стационарных компьютеров в секции компьютеров")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Тестирование отображения страницы стационарных компьютеров в секции компьютеров")
     void computersDesktopsBrowsePageTest() {
 
         step("Открыть Demo Web Shop", () -> {
