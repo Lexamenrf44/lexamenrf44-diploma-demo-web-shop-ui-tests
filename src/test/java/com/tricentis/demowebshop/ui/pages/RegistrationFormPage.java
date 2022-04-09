@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegistrationForm {
+public class RegistrationFormPage {
 
     SelenideElement genderRadio = $(".inputs"),
             firstNameInput = $("#FirstName"),
@@ -16,14 +16,14 @@ public class RegistrationForm {
             passwordConfirmInput = $("#ConfirmPassword"),
             registerButton = $(".register-next-step-button");
 
-    public RegistrationForm goToRegistrationPage() {
+    public RegistrationFormPage goToRegistrationPage() {
 
         $(".header-links [href*='/register']").click();
 
         return this;
     }
 
-    public RegistrationForm checkRegistrationPage() {
+    public RegistrationFormPage checkRegistrationPage() {
 
         $(".registration-page").should(appear);
         $(".registration-page").shouldBe(visible);
@@ -34,49 +34,49 @@ public class RegistrationForm {
         return this;
     }
 
-    public RegistrationForm selectUserGender(String gender) {
+    public RegistrationFormPage selectUserGender(String gender) {
         genderRadio.find(byText(gender)).click();
 
         return this;
     }
 
-    public RegistrationForm enterFirstName(String value) {
+    public RegistrationFormPage enterFirstName(String value) {
         firstNameInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationForm enterLastName(String value) {
+    public RegistrationFormPage enterLastName(String value) {
         lastNameInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationForm enterUserEmail(String email) {
+    public RegistrationFormPage enterUserEmail(String email) {
         emailInput.setValue(email);
 
         return this;
     }
 
-    public RegistrationForm enterPassword(String password) {
+    public RegistrationFormPage enterPassword(String password) {
         passwordInput.setValue(password);
 
         return this;
     }
 
-    public RegistrationForm enterConfirmPassword(String password) {
+    public RegistrationFormPage enterConfirmPassword(String password) {
         passwordConfirmInput.setValue(password);
 
         return this;
     }
 
-    public RegistrationForm submitUserRegistrationForm() {
+    public RegistrationFormPage submitUserRegistrationForm() {
         registerButton.click();
 
         return this;
     }
 
-    public RegistrationForm checkFirstNameField() {
+    public RegistrationFormPage checkFirstNameField() {
        $("span [for='FirstName']").shouldHave(text("First name is required."));
 
         return this;
