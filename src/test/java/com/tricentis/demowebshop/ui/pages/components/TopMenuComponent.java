@@ -8,30 +8,29 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class TopMenuComponent {
 
-    SelenideElement topMenuComputersHoverButton = $(".top-menu [href*='/computers']"),
-    topMenuComputersHoverDesktopsSubsection = $(withText("Desktops")),
-    topMenuComputersHoverNotebooksSubsection = $(withText("Notebooks")),
-    topMenuComputersHoverAccessoriesSubsection = $(withText("Accessories"));
+    SelenideElement computersHoverButton = $(".top-menu [href*='/computers']"),
+                    hoverDesktops = $(withText("Desktops")),
+                    hoverNotebooks = $(withText("Notebooks")),
+                    hoverAccessories = $(withText("Accessories"));
 
     public TopMenuComponent checkTopMenuComputersHoverButton() {
-        topMenuComputersHoverButton.hover();
-        topMenuComputersHoverDesktopsSubsection.should(appear);
-        topMenuComputersHoverNotebooksSubsection.should(appear);
-        topMenuComputersHoverAccessoriesSubsection.should(appear);
+        computersHoverButton.hover();
+        hoverDesktops.should(appear).shouldBe(visible).shouldHave(text("Desktops"));
+        hoverNotebooks.should(appear).shouldBe(visible).shouldHave(text("Notebooks"));
+        hoverAccessories.should(appear).shouldBe(visible).shouldHave(text("Accessories"));
 
         return this;
     }
 
     public TopMenuComponent goToComputersSection() {
-        topMenuComputersHoverButton.click();
+        computersHoverButton.click();
 
         return this;
     }
 
     public TopMenuComponent goToDesktopSubCategorySection() {
-
-        $(".top-menu [href*='/computers']").hover();
-        $(withText("Desktops")).click();
+        computersHoverButton.hover();
+        hoverDesktops.click();
 
         return this;
     }
