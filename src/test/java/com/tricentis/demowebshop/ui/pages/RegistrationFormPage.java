@@ -101,8 +101,10 @@ public class RegistrationFormPage {
         registrationCompletePage.should(appear).shouldBe(visible);
         registrationCompletePageTitle.should(appear).shouldBe(visible).shouldHave(text("Register"));
         registrationCompletePageBody.should(appear).shouldBe(visible).shouldHave(text("Your registration completed"));
-        registeredUser.should(appear).shouldBe(visible);
 
+        return this;
+    }
+    public RegistrationFormPage checkRegistrationEmail(String email) { registeredUser.shouldHave(text(email));
         return this;
     }
 }
