@@ -1,13 +1,17 @@
 package com.tricentis.demowebshop.ui.pages.components;
 
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TopMenuComputersComponent {
 
+    SelenideElement computersSection = $(".top-menu [href*='/computers']");
+
     public TopMenuComputersComponent checkTopMenuComputersHoverButton() {
-        $(".top-menu [href*='/computers']").hover();
+        computersSection.hover();
         $(withText("Desktops")).should(appear);
         $(withText("Notebooks")).should(appear);
         $(withText("Accessories")).should(appear);
@@ -16,8 +20,7 @@ public class TopMenuComputersComponent {
     }
 
     public TopMenuComputersComponent goToComputersSection() {
-
-        $(".top-menu [href*='/computers']").click();
+        computersSection.click();
 
         return this;
     }
