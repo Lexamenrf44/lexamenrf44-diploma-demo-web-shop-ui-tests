@@ -27,7 +27,7 @@ public class RegistrationFormPage {
             registrationCompletePage = $(".registration-result-page"),
             registrationCompletePageTitle = $(".registration-result-page .page-title"),
             registrationCompletePageBody = $(".registration-result-page .page-body"),
-            registeredUser = $(".header-links [href*='/customer/info']");
+            registeredUserLogin = $(".header-links [href*='/customer/info']");
 
     public RegistrationFormPage goToRegistrationPage() { registrationGoToButton.click();
         return this;
@@ -105,7 +105,7 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage checkRegistrationEmail(String email) { registeredUser.shouldHave(text(email));
+    public RegistrationFormPage checkRegisteredUserLogin(String email) { registeredUserLogin.shouldHave(text(email));
         return this;
     }
 }
