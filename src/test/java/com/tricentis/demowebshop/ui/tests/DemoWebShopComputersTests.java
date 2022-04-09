@@ -3,7 +3,7 @@ package com.tricentis.demowebshop.ui.tests;
 import com.tricentis.demowebshop.ui.configuration.TestBase;
 import com.tricentis.demowebshop.ui.pages.MainPage;
 import com.tricentis.demowebshop.ui.pages.components.LeftSideMenuComponent;
-import com.tricentis.demowebshop.ui.pages.components.TopMenuComputersComponent;
+import com.tricentis.demowebshop.ui.pages.components.TopMenuComponent;
 import com.tricentis.demowebshop.ui.pages.ComputersSectionPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 public class DemoWebShopComputersTests extends TestBase {
 
     MainPage mainPage = new MainPage();
-    TopMenuComputersComponent topMenuComputersComponent = new TopMenuComputersComponent();
+    TopMenuComponent topMenuComponent = new TopMenuComponent();
     LeftSideMenuComponent leftSideMenuComponent = new LeftSideMenuComponent();
     ComputersSectionPage computersSectionPage = new ComputersSectionPage();
 
@@ -30,7 +30,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Проверка отображения ховера 'Computers'", () -> {
-            topMenuComputersComponent.checkTopMenuComputersHoverButton();
+            topMenuComponent.checkTopMenuComputersHoverButton();
         });
 
     }
@@ -66,7 +66,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputersComponent.goToComputersSection();
+            topMenuComponent.goToComputersSection();
         });
 
         step("Проверка отображения страницы компьютеров", () -> {
@@ -118,7 +118,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputersComponent.goToDesktopSubCategorySection();
+            topMenuComponent.goToDesktopSubCategorySection();
         });
 
         step("Проверка отображения страницы стационарных компьютеров", () -> {
