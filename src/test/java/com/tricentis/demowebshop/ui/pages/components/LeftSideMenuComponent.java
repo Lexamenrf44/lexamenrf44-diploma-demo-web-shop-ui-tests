@@ -1,11 +1,11 @@
-package com.tricentis.demowebshop.ui.pages.leftsidemenu;
+package com.tricentis.demowebshop.ui.pages.components;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class LeftSideMenuComputers {
+public class LeftSideMenuComponent {
 
-    public LeftSideMenuComputers checkLeftMenuComputersButton() {
+    public LeftSideMenuComponent checkLeftMenuComputersButton() {
         $(".block-category-navigation [href*='/computers']").should(appear);
         $(".block-category-navigation [href*='/computers']").shouldBe(visible);
         $(".block-category-navigation [href*='/computers']").shouldHave(text("Computers"));
@@ -13,7 +13,7 @@ public class LeftSideMenuComputers {
         return this;
     }
 
-    public LeftSideMenuComputers goToComputersSection() {
+    public LeftSideMenuComponent goToComputersSection() {
         $(".block-category-navigation .list [href*='/computers']").click();
 
         return this;
