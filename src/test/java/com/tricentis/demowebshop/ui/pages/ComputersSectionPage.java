@@ -1,4 +1,4 @@
-package com.tricentis.demowebshop.ui.pages.sections;
+package com.tricentis.demowebshop.ui.pages;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.*;
@@ -6,9 +6,9 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class ComputersSection {
+public class ComputersSectionPage {
 
-    public ComputersSection checkComputersSectionPage() {
+    public ComputersSectionPage checkComputersSectionPage() {
         $("[class='page category-page']").should(appear);
         $("[class='page category-page']").shouldBe(visible);
 
@@ -16,7 +16,7 @@ public class ComputersSection {
         return this;
     }
 
-    public ComputersSection checkComputersSectionTitle() {
+    public ComputersSectionPage checkComputersSectionTitle() {
         $(".category-page .page-title").should(appear);
         $(".category-page .page-title").shouldBe(visible);
         $(".category-page .page-title").shouldHave(text("Computers"));
@@ -24,7 +24,7 @@ public class ComputersSection {
         return this;
     }
 
-    public ComputersSection checkComputersSectionMainPageSubCategories() {
+    public ComputersSectionPage checkComputersSectionMainPageSubCategories() {
         $(".page-body .sub-category-grid").should(appear);
         $(".page-body .sub-category-grid").should(visible);
         $$(".item-box").shouldHave(size(3));
@@ -35,7 +35,7 @@ public class ComputersSection {
         return this;
     }
 
-    public ComputersSection checkComputersSectionLeftSideMenuSubCategories() {
+    public ComputersSectionPage checkComputersSectionLeftSideMenuSubCategories() {
         $(".block-category-navigation .list .active [href*='/computers']").shouldHave(text("Computers"));
         $$(".block-category-navigation .list .sublist .inactive").shouldHave(size(3));
         $(".block-category-navigation .list .sublist .inactive [href*='/desktops']").shouldHave(text("Desktops"));
@@ -45,7 +45,7 @@ public class ComputersSection {
         return this;
     }
 
-    public ComputersSection checkDesktopsSection() {
+    public ComputersSectionPage checkDesktopsSection() {
         $(".category-page .page-title").should(appear);
         $(".category-page .page-title").shouldBe(visible);
         $(".category-page .page-title").shouldHave(text("Desktops"));
