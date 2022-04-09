@@ -8,7 +8,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationFormPage {
 
-    SelenideElement genderRadio = $(".inputs"),
+    SelenideElement registrationGoToButton = $(".header-links [href*='/register']"),
+            registrationPage = $(".registration-page"),
+            registrationPageTitle = $(".registration-page .page-title"),
+            registrationPageBody = $(".registration-page .page-body"),
+            genderRadio = $(".inputs"),
             firstNameInput = $("#FirstName"),
             lastNameInput = $("#LastName"),
             emailInput = $("Email"),
@@ -16,20 +20,14 @@ public class RegistrationFormPage {
             passwordConfirmInput = $("#ConfirmPassword"),
             registerButton = $(".register-next-step-button");
 
-    public RegistrationFormPage goToRegistrationPage() {
-
-        $(".header-links [href*='/register']").click();
-
+    public RegistrationFormPage goToRegistrationPage() { registrationGoToButton.click();
         return this;
     }
 
     public RegistrationFormPage checkRegistrationPage() {
-
-        $(".registration-page").should(appear);
-        $(".registration-page").shouldBe(visible);
-        $(".registration-page .page-title").shouldHave(text("Register"));
-        $(".registration-page .page-body").should(appear);
-        $(".registration-page .page-body").shouldBe(visible);
+        registrationPage.should(appear).shouldBe(visible);
+        registrationPageTitle.should(appear).shouldBe(visible).shouldHave(text("Register"));
+        registrationPageBody.should(appear).shouldBe(visible);
 
         return this;
     }
