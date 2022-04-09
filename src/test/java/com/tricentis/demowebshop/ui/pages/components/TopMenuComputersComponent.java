@@ -1,12 +1,12 @@
-package com.tricentis.demowebshop.ui.pages.topmenu;
+package com.tricentis.demowebshop.ui.pages.components;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class TopMenuComputers {
+public class TopMenuComputersComponent {
 
-    public TopMenuComputers checkTopMenuComputersHoverButton() {
+    public TopMenuComputersComponent checkTopMenuComputersHoverButton() {
         $(".top-menu [href*='/computers']").hover();
         $(withText("Desktops")).should(appear);
         $(withText("Notebooks")).should(appear);
@@ -15,14 +15,14 @@ public class TopMenuComputers {
         return this;
     }
 
-    public TopMenuComputers goToComputersSection() {
+    public TopMenuComputersComponent goToComputersSection() {
 
         $(".top-menu [href*='/computers']").click();
 
         return this;
     }
 
-    public TopMenuComputers goToDesktopSubCategorySection() {
+    public TopMenuComputersComponent goToDesktopSubCategorySection() {
 
         $(".top-menu [href*='/computers']").hover();
         $(withText("Desktops")).click();
