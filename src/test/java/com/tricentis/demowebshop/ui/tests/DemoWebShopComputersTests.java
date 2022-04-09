@@ -1,10 +1,10 @@
 package com.tricentis.demowebshop.ui.tests;
 
 import com.tricentis.demowebshop.ui.configuration.TestBase;
-import com.tricentis.demowebshop.ui.pages.DemoWebShop;
+import com.tricentis.demowebshop.ui.pages.MainPage;
 import com.tricentis.demowebshop.ui.pages.components.LeftSideMenuComponent;
-import com.tricentis.demowebshop.ui.pages.topmenu.TopMenuComputers;
-import com.tricentis.demowebshop.ui.pages.sections.ComputersSection;
+import com.tricentis.demowebshop.ui.pages.components.TopMenuComputersComponent;
+import com.tricentis.demowebshop.ui.pages.ComputersSectionPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 
@@ -12,10 +12,10 @@ import static io.qameta.allure.Allure.step;
 
 public class DemoWebShopComputersTests extends TestBase {
 
-    DemoWebShop demoWebShop = new DemoWebShop();
-    TopMenuComputers topMenuComputers = new TopMenuComputers();
+    MainPage mainPage = new MainPage();
+    TopMenuComputersComponent topMenuComputersComponent = new TopMenuComputersComponent();
     LeftSideMenuComponent leftSideMenuComponent = new LeftSideMenuComponent();
-    ComputersSection computersSection = new ComputersSection();
+    ComputersSectionPage computersSectionPage = new ComputersSectionPage();
 
     @Test
     @Owner("lexamenrf44")
@@ -26,11 +26,11 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersTopMenuComputersHoverButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Проверка отображения ховера 'Computers'", () -> {
-            topMenuComputers.checkTopMenuComputersHoverButton();
+            topMenuComputersComponent.checkTopMenuComputersHoverButton();
         });
 
     }
@@ -44,7 +44,7 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersCategoryLeftMenuComputersButtonTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Проверка отображения кнопки 'Computers' в боковом меню категорий", () -> {
@@ -62,23 +62,23 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersSectionTest() {
 
         step("Открыть сайт Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToComputersSection();
+            topMenuComputersComponent.goToComputersSection();
         });
 
         step("Проверка отображения страницы компьютеров", () -> {
-            computersSection.checkComputersSectionPage();
+            computersSectionPage.checkComputersSectionPage();
         });
 
         step("Проверка отображения заголовка страницы компьютеров", () -> {
-            computersSection.checkComputersSectionTitle();
+            computersSectionPage.checkComputersSectionTitle();
         });
 
         step("Проверка отображения подкатегорий на странице компьютеров", () -> {
-            computersSection.checkComputersSectionMainPageSubCategories();
+            computersSectionPage.checkComputersSectionMainPageSubCategories();
         });
 
     }
@@ -92,7 +92,7 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersSectionLeftSideMenuSubCategoriesTest() {
 
         step("Открыть Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Перейти на страницу компьютеров", () -> {
@@ -100,7 +100,7 @@ public class DemoWebShopComputersTests extends TestBase {
         });
 
         step("Проверка отображения подкатегорий в левом меню на странице компьютеров", () -> {
-            computersSection.checkComputersSectionLeftSideMenuSubCategories();
+            computersSectionPage.checkComputersSectionLeftSideMenuSubCategories();
         });
 
     }
@@ -114,15 +114,15 @@ public class DemoWebShopComputersTests extends TestBase {
     void computersDesktopsBrowsePageTest() {
 
         step("Открыть Demo Web Shop", () -> {
-            demoWebShop.openDemoWebShop();
+            mainPage.openDemoWebShop();
         });
 
         step("Перейти на страницу компьютеров", () -> {
-            topMenuComputers.goToDesktopSubCategorySection();
+            topMenuComputersComponent.goToDesktopSubCategorySection();
         });
 
         step("Проверка отображения страницы стационарных компьютеров", () -> {
-            computersSection.checkDesktopsSection();
+            computersSectionPage.checkDesktopsSection();
         });
 
     }
