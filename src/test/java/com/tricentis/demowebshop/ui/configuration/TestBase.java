@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.*;
+import static java.lang.String.format;
 
 public class TestBase {
 
@@ -24,12 +25,10 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion", "91");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
-        /*
         String remoteUrl = System.getProperty("remoteUrl");
-        String user = System.getProperty("user");
-        String password = System.getProperty("password");
-        Configuration.remote = "https://" + user + ":" + password + "@" + remoteUrl;
-         */
+        String user = Credentials.config.user();
+        String password = Credentials.config.password();
+        Configuration.remote = format("https://%s:%s@%s", user, password, remoteUrl);
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
