@@ -1,1 +1,1 @@
-# lexamenrf44-diploma-demo-web-shop-ui-tests
+# UI and API test tests for [Demo Web Shop](http://demowebshop.tricentis.com) 
