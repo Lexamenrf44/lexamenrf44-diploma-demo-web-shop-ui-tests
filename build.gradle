@@ -11,7 +11,8 @@ def allureVersion = '2.17.3',
     junitVersion = "5.8.2",
     fakerVersion = "1.0.2",
     slf4jVersion = "1.7.36",
-    selenideVersion = "6.3.5"
+    selenideVersion = '6.4.0',
+    restAssured = '4.5.1'
 
 allure {
     report {
@@ -31,6 +32,9 @@ allure {
 dependencies {
 
     testImplementation(
+            "io.rest-assured:rest-assured:$restAssured",
+            "io.rest-assured:json-schema-validator:$restAssured",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
             "com.codeborne:selenide:$selenideVersion",
             "com.github.javafaker:javafaker:$fakerVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
