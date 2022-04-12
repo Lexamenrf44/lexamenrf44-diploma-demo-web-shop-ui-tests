@@ -1,4 +1,4 @@
-package com.tricentis.demowebshop.ui.tools;
+package com.tricentis.demowebshop.ui.helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
