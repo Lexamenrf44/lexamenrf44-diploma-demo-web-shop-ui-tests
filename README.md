@@ -19,8 +19,6 @@
 <img width="6%" title="GitHub" src="img/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="img/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="img/logo/Telegram.svg">
-<img width="6%" title="Rest-Assured" src="img/logo/Rest-Assured.svg">
-  <img width="6%" title="Rest-Assured" src="img/logo/Rest-Assured.svg">
 </p>
 
 This project has written in [Java](https://go.java/) using [Selenide](https://selenide.org) framework
