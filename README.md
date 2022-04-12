@@ -1,5 +1,11 @@
 # UI and API test tests for [Demo Web Shop](http://demowebshop.tricentis.com) 
 
+## Content
+
+> ➠ [Covered features](#Covered-features)
+>
+> ➠ [Technology Stack](#Technology-Stack)
+
 ## Covered features:
 - [x] UI: Registration tests
 - [x] UI: Computer section tests
