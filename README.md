@@ -20,3 +20,13 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
+
+This project has written in [Java](https://go.java/) using [Selenide](https://selenide.org) framework
+for UI-tests and [REST-Assured](https://rest-assured.io) for API-test.
+[Gradle](https://gradle.org) is used to build the project.
+[JUnit 5](https://junit.org/junit5/) is used as a unit-testing framework.
+[Allure Report](http://allure.qatools.ru), [Allure TestOps](https://docs.qameta.io/allure-testops/),
+[Jira](https://www.atlassian.com/software/jira) and
+[Telegram Bot](https://core.telegram.org/bots) are used to visualize test results.
+Tests are launched from [Jenkins](). [Selenoid](https://aerokube.com/selenoid/) is used to run browsers in
+[Docker containers](https://www.docker.com/resources/what-container).
