@@ -1,11 +1,21 @@
 package com.tricentis.demowebshop.api.tests;
 
+import io.restassured.RestAssured;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.Matchers.*;
+import static com.tricentis.demowebshop.api.helpers.CustomAllureListener.withCustomTemplates;
 
 public class DemoWebShopAddToTests {
+
+    @BeforeAll
+    static void setup() {
+        RestAssured.filters(withCustomTemplates());
+
+    }
 
     @Test
     void addProductToCartWithCookiesTest() {
