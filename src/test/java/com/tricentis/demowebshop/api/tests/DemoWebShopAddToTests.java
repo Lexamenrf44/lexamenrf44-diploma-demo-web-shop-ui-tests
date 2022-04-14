@@ -1,7 +1,9 @@
 package com.tricentis.demowebshop.api.tests;
 
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -18,6 +20,11 @@ public class DemoWebShopAddToTests {
     }
 
     @Test
+    @Owner("lexamenrf44")
+    @Feature("AddToCart")
+    @Story("Реализовать API добавления продукта в корзину")
+    @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Тестирование API добавления продукта в корзину с cookies")
     void addProductToCartWithCookiesTest() {
         given()
                 .contentType("application/x-www-form-urlencoded; charset=UTF-8")
@@ -38,6 +45,11 @@ public class DemoWebShopAddToTests {
     }
 
     @Test
+    @Owner("lexamenrf44")
+    @Feature("AddToCart")
+    @Story("Реализовать API добавления продукта в корзину")
+    @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Тестирование API добавления продукта в корзину без cookies")
     void addProductToCartWithoutCookiesTest() {
         given()
                 .contentType("application/x-www-form-urlencoded; charset=UTF-8")
@@ -58,6 +70,11 @@ public class DemoWebShopAddToTests {
     }
 
     @Test
+    @Owner("lexamenrf44")
+    @Feature("AddToWishlist")
+    @Story("Реализовать API добавления продукта в список желаемого")
+    @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Тестирование API добавления продукта в список желаемого с cookies")
     void addProductToWishlistWithCookiesTest() {
         given()
                 .contentType("application/x-www-form-urlencoded; charset=UTF-8")
@@ -78,6 +95,11 @@ public class DemoWebShopAddToTests {
     }
 
     @Test
+    @Owner("lexamenrf44")
+    @Feature("AddToWishlist")
+    @Story("Реализовать API добавления продукта в список желаемого")
+    @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Тестирование API добавления продукта в список желаемого без cookies")
     void addProductToWishlistWithoutCookiesTest() {
         given()
                 .contentType("application/x-www-form-urlencoded; charset=UTF-8")
