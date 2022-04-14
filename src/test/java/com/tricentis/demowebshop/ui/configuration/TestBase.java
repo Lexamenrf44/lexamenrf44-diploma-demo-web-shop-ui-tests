@@ -39,7 +39,6 @@ public class TestBase {
     @BeforeEach
     public void beforeEach(){
         open("");
-        visualizeMouseClick();
     }
 
     @AfterEach
@@ -51,17 +50,6 @@ public class TestBase {
         AllureReportAttachments.addVideo();
         closeWebDriver();
 
-    }
-
-    public void visualizeMouseClick(){
-        executeJavaScript("function onClick(event) {\n" +
-                "        var e = event || window.event;\n" +
-                "        var target = e.target || e.srcElement;\n" +
-                "        target.style['box-sizing'] = 'border-box';\n" +
-                "        target.style['border'] = '2px solid green';\n" +
-                "      }\n" +
-                "    \n" +
-                "      document.addEventListener('click', onClick);");
     }
 
 }
