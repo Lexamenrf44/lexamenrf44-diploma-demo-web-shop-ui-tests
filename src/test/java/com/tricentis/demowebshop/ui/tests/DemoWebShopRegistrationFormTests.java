@@ -46,7 +46,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки незаполненной формы регистрации нового пользователя")
@@ -75,7 +75,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки полностью заполненной формы регистрации нового пользователя")
@@ -128,7 +128,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки формы регистрации нового пользователя с заполненным полем First Name")
@@ -160,7 +160,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки формы регистрации нового пользователя с заполненным полем Last Name")
@@ -192,7 +192,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки формы регистрации нового пользователя с заполненным полем Email")
@@ -224,7 +224,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки формы регистрации нового пользователя с заполненным полем Password")
@@ -256,7 +256,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки формы регистрации нового пользователя с заполненным полем Confirm Password")
@@ -288,7 +288,7 @@ public class DemoWebShopRegistrationFormTests extends TestBase {
 
     @Test
     @Owner("lexamenrf44")
-    @Feature("Computers")
+    @Feature("RegistrationForm")
     @Story("Реализовать функционал регистрации новых пользователей в магазине Demo Web Shop")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Тестирование отправки заполненной формы регистрации нового пользователя с разными паролями")
